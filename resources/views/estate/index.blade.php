@@ -39,7 +39,7 @@
         </header>
         <main>
                    
-            <h1 class="text-sm-start"> 不動産検索サイト</h1>
+            <h1 class="text-sm-start"> 不動産検索サイト2</h1>
             
             <p class="text-start"> ご希望の条件を選択してください</p>
         
