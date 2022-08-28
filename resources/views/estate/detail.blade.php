@@ -60,8 +60,7 @@
                                 </div>                                                    
                         </div>
                         
-                        <div ciass="card"
-                        >
+                        <div ciass="card">
                             <h5 class="card-title"> 住所:{{ $detail->room_adderss }} </h5>
                         </div>
             </div>

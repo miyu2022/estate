@@ -13,15 +13,7 @@
         <!-- Custom styles for this template -->
         <!-- bootから移したら、パスをそろえること-->
         <link href="css/product.css" rel="stylesheet">
-        <style>
-            h1 {
-                padding: 20px;
-                margin: 30px;
-            }
-            p {
-                margin: 30px;
-            }
-        </style> 
+       
     </head>
     <body>
 
@@ -39,14 +31,26 @@
         </header>
         <main>
                    
-            <h1 class="text-sm-start"> 不動産検索サイト2</h1>
+            <h1 class="text-sm-start"> 不動産検索サイト</h1>
             
-            <p class="text-start"> ご希望の条件を選択してください</p>
+            <p class="text-sm-start"> ご希望の条件を選択してください</p>
+            <style>
+            h1 {
+                padding: 20px;
+                margin: 50px;
+            }
+            p {
+                margin: 40px;
+            }
+            </style> 
         
             <form method="post" action="search"> <!--web.php のかたちに合わせる -->
-                <!--　↓これがないと権限エラー419になる--> 
+             <!--　↓これがないと権限エラー419になる--> 
                 @csrf
-                <div class="text-center ">
+            <link rel="stylesheet" href="css/index.css">
+            <body>
+            <div id="wrapper">
+                <div class="text-center">                
                     <div class="form-check form-check-inline">
                         <input type="checkbox" class="form-check-input" name="bukken_type[]" value="1">
                         <label class="form-check-label" for="save-info">マンション</label>
@@ -60,136 +64,74 @@
                         <label class="form-check-label" for="save-info">一戸建</label>
                     </div>
                 </div>
-               
                 <div class="text-start ms-5"> エリア</div>
-                <div class="ms-5">                   
-                    <div class="form-check"> 
-                                                                                              <!--[] 配列　2以上チェックするときのため -->
-                        <input type="checkbox" class="form-check-input" name="bukken_address[]" value="0">
-                        <label class="form-check-label" for="save-info">鹿児島市（中央）</label>
-                    </div>                 
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" name="bukken_address[]" value="1">
-                        <label class="form-check-label" for="save-info">鹿児島市（山田　中山）</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" name="bukken_address[]" value="2">
-                        <label class="form-check-label" for="save-info">鹿児島市（和田　谷山）</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" name="bukken_address[]" value="">
-                        <label class="form-check-label" for="save-info">鹿児島市（すべてのエリア）</label>
-                    </div>
-                </div>
-
-                <div class="text-start ms-5"> 家賃　
-                    <select> 
-                        <option>下限なし</option> 
-                        <option>30,000</option> 
-                        <option>40,000</option> 
-                        <option>50,000</option> 
-                    </select>
-                    <label>円  ～  </label> 
-                    <select> 
-                        <option>上限なし</option> 
-                        <option>60,000</option> 
-                        <option>70,000</option> 
-                        <option>80,000</option> 
-                    </select>
-                    <label>円</label> 
-                </div>
-                
-        <tr>
-            <div class="text-start ms-5"> 間取
-            <td>           
-                <div class="tdBox_inner">
-                    <label><input type="checkbox" name="madori_name[]" value="1" />1R・1K・1LDK</label>
-                    <label><input type="checkbox" name="madori_name[]" value="2" />2K・2DK・2LDK</label>
-                    <label><input type="checkbox" name="madori_name[]" value="3" />3K・3DK・3LDK</label>
-                    <label><input type="checkbox" name="madori_name[]" value="4" />4LDK以上</label>
-                </div>
-            </div>
-            </td>
-        </tr>
-
-        <tr>
-
-               
-                
-                    <label>利用規約に同意する</label> 
-                    <input type="checkbox">
-                <div class="text-center mt-3 mb-3">
-                    <div class="row">
-                        <div class="col-3">間 取</div>
-                        <div class="col-9">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">1R・1K・1LDK </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">2K・2DK・2LDK </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">3K・3DK・3LDK </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">4LDK以上</label>
-                            </div>   
+                    <div id="point2">    
+                        <div class="form-check"> 
+                                                                                        <!--[] 配列　2以上チェックするときのため -->
+                            <input type="checkbox" class="form-check-input" name="bukken_address[]" value="0">
+                            <label class="form-check-label" for="save-info">鹿児島市（中央）</label>
+                        </div>                 
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="bukken_address[]" value="1">
+                            <label class="form-check-label" for="save-info">鹿児島市（山田　中山）</label>
                         </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="bukken_address[]" value="2">
+                            <label class="form-check-label" for="save-info">鹿児島市（和田　谷山）</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="bukken_address[]" value="">
+                            <label class="form-check-label" for="save-info">鹿児島市（すべてのエリア）</label>
+                        </div>                       
                     </div>
-                </div>   
-                <div class="text-center mt-3 mb-3">
-                    <div class="row">
-                        <div class="col-3">築 年 数</div>
-                        <div class="col-9">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">新築（１年以内）</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">５年以内</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">１０年以内</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">指定なし</label>
-                            </div>   
-                        </div>    
+                <div class="text-start ms-5"> 家賃　</div>
+                    <div id="point4"> 
+                        <select> 
+                                <option>下限なし</option> 
+                                <option>30,000</option> 
+                                <option>40,000</option> 
+                                <option>50,000</option> 
+                            </select>
+                            <label>円  ～  </label> 
+                            <select> 
+                                <option>上限なし</option> 
+                                <option>60,000</option> 
+                                <option>70,000</option> 
+                                <option>80,000</option> 
+                            </select>
+                            <label>円</label> 
                     </div>
-                </div>
-                <div class="text-center mt-3 mb-5">
-                    <div class="row">
-                        <div class="col-3">設 備</div>
-                        <div class="col-9">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">バストイレ別 </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">エアコン</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">オートロック </label>
+                    <div class="text-start ms-5"> 間取 </div>
+                        <div id="point6">   
+                            <div class="tdBox_inner">
+                                <label><input type="checkbox" name="madori_name[]" value="1" />1R・1K・1LDK</label>
+                                <label><input type="checkbox" name="madori_name[]" value="2" />2K・2DK・2LDK</label>
+                                <label><input type="checkbox" name="madori_name[]" value="3" />3K・3DK・3LDK</label>
+                                <label><input type="checkbox" name="madori_name[]" value="4" />4LDK以上</label>
                             </div>
                         </div>
-                    </div>
                 </div>
-                <div class="text-center mt-5 mb-5">
+                <div class="text-center2 mt-5 mb-5">
                     <button type="submit" class="btn btn-lg btn-outline-secondary" >この条件で検索する</button>
                 </div>
 
-                <div class="text-center  mt-5 mb-3">
+                <div class="text-center3  mt-5 mb-3">
                     <a href="{{ url('/') }}" class="btn btn-outline-secondary" >条件をクリアする</a>
                 </div>
+            </div>
+            </body>     
+
+                
+              
+               
+
+                   
+                
+                  
+                    
+
+               
+               
             </form>
         </main>
         <footer class="container py-5">
