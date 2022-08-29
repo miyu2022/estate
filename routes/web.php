@@ -14,7 +14,7 @@
 Route::get('/', 'EstateController@index'); 
 
 // 検索処理
-Route::post('/search', 'EstateController@search');
+Route::any('/search', 'EstateController@search');
 
 // 詳細画面表示処理
 Route::get('/detail', 'EstateController@detail');

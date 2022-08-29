@@ -41,14 +41,16 @@
             <h1 class="text-sm-start">物件詳細</h1>
             <div class="w-75 m-auto">
                 <div class="card">
-                    <h5 class="card-header">{{ $detail->bukken_name }}  {{ $detail->room_number }}号室</h5>
+                    <h5 class="card-header">{{ $detail->bukken_name }}  {{ $detail->room_number }}
+                        @if($detail->room_number !="")号室@endif
+                    </h5>
                     <div class="card-body">
                         <h5 class="card-title"> 家賃:{{ $detail->room_cost }}円  間取:{{ $detail->madori_name }} ({{ $detail->room_type_memo}})  </h5>
                     </div>
                                         
                     
                         <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/05.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>                                                    
@@ -59,10 +61,7 @@
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>                                                    
                         </div>
-                        
-                        <!--div ciass="card">
-                            <h5 class="card-title"> 住所:{{ $detail->bukken_adderss }} </h5>
-                        </div-->
+                
             </div>
 
             <a href="#" class="btn btn-primary">印刷する</a>
