@@ -60,9 +60,9 @@
                                 </div>                                                    
                         </div>
                         
-                        <div ciass="card">
-                            <h5 class="card-title"> 住所:{{ $detail->room_adderss }} </h5>
-                        </div>
+                        <!--div ciass="card">
+                            <h5 class="card-title"> 住所:{{ $detail->bukken_adderss }} </h5>
+                        </div-->
             </div>
 
             <a href="#" class="btn btn-primary">印刷する</a>
